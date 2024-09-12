@@ -1,14 +1,14 @@
+nombre = str(input("Ingrese su nombre: ")).upper()
+sexo = str(input("Ingrese su sexo (M o F): ")).upper()
 
-nombre = str(input("Ingrese su nombre: "))
-sexo = str(input("Ingrese su sexo: "))
-
-if sexo == "F":
-    if nombre[0] < "M":
-        print(nombre, sexo, "Grupo A", sep=", ")
-    else:
-        print(nombre, sexo, "Grupo B", sep=", ")
-elif sexo == "M":
-    if nombre[0] > "N":
-        print(nombre, sexo, "Grupo A", sep=", ")
-    else:
-        print(nombre, sexo, "Grupo B", sep=", ")
+match sexo:
+        case "F":
+            if nombre[0] < "M":
+                print(f"Hola {nombre}, usted corresponde al grupo A")
+            else:
+                print(f"Hola {nombre}, usted corresponde al grupo B")
+        case "M":
+            if nombre[0] > "N":
+                print(f"Hola {nombre}, usted corresponde al grupo A")
+            else:
+                print(f"Hola {nombre}, usted corresponde al grupo B") 
